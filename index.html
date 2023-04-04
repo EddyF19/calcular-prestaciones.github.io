@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- METADATA -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITLE -->
+    <title>Salary Discount Calculator</title>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <!-- CDN -->    
+</head>
+<body>        
+    <header class="header">                    
+        <nav>
+            <div class="container-header-title">
+                <a href="https://atdev.do/"><h1 class="title-app"><img class="img-logo" src="./img/logo.png" alt="Logo ATDEV"></h1></a>    
+            </div>                
+            <div class="container-nav-ul">
+                <ul>
+                    <li><a href="https://atdev.do/">Home</a></li>
+                    <li><a href="./index.html">Calculadora Prestaciones</a></li>                        
+                    <li><a href="https://atdev.do/pages/careersus/">Careers</a></li>
+                    <li><a href="https://atdev.do/pages/about/">About</a></li>
+                    <li><a href="https://atdev.do/pages/contact/">Contact</a></li>
+                </ul>
+            </div>
+        </nav>            
+    </header>    
+    <main class="main">   
+        <section class="container-section section-user-information">
+                <form action="#" id="form-user-information">               
+                    <div class="container-user-input">
+                        <fieldset class="datos-solicitante">
+                            <legend>Datos del solicitante</legend>
+                            <div class="container-input">                            
+                                <label class="lbl-documento-identida" for="input-documento-identida">Documento Identidad</label>
+                                <input type="text" id="input-documento-identida" placeholder='"Cédula, Pasaporte, Etc."' required>                            
+                            </div>
+                            <div class="container-input">                            
+                                <label class="lbl-nombre" for="input-nombre">Nombre</label>
+                                <input type="text" id="input-nombre" placeholder="Ej. Juan Perez" required>                            
+                            </div>
+                            <div class="container-input">                            
+                                <label class="lbl-nombre-empresa" for="input-nombre-empresa">Nombre de la Empresa</label>
+                                <input type="text" id="input-nombre-empresa" placeholder="Ej. Kaizen INC." required>                            
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Seleccion de fechas</legend>
+                            <div class="container-input">   
+                                <div class="container-input-date">
+                                    <label class="lbl-fecha-ingreso" for="dateFechaIngreso">Fecha de ingreso</label>
+                                    <input type="date" id="dateFechaIngreso" required>                                
+                                </div>  
+                                <div class="container-input-date">
+                                    <label class="lbl-fecha-salida" for="dateFechaSalida">Fecha de salida</label>
+                                    <input type="date" id="dateFechaSalida" required>
+                                </div>                                                                                                        
+                            </div>      
+                        </fieldset>                    
+                    </div>
+                    <div class="container-user-radios">
+                        <fieldset>
+                            <legend>Seleccione la frecuencia de pago</legend>
+                            <div class="container-inputs-radio">
+                                <div class="container-radio-mensual">
+                                    <input class="option-input radio" type="radio" id="periodo-mensual" name="periodo" checked>
+                                    <label for="periodo-mensual">Mensual</label>
+                                </div>
+                                <div class="container-radio-quincenal">
+                                    <input class="option-input radio" type="radio" id="periodo-quincenal" name="periodo">
+                                    <label for="periodo-quincenal">Quincenal</label>
+                                </div>
+                                <div class="container-radio-semanal">
+                                    <input class="option-input radio" type="radio" id="periodo-semanal" name="periodo">
+                                    <label for="periodo-semanal">Semanal</label>
+                                </div>
+                                <div class="container-radio-diario">
+                                    <input class="option-input radio" type="radio" id="periodo-diario" name="periodo">
+                                    <label for="periodo-diario">Diario</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Seleccione el tipo de cálculo</legend>
+                            <div class="container-inputs-radio">
+                                <div class="container-radio-mensual">
+                                    <label for="calculo-ordinario"></label>
+                                        <input class="option-input radio" type="radio" id="calculo-ordinario" name="tipo-calculo" checked>
+                                        Ordinario
+                                    </label>
+                                </div>
+                                <div class="container-radio-quincenal">
+                                    <label for="calculo-intermitente"></label>
+                                        <input class="option-input radio" type="radio" id="calculo-intermitente" name="tipo-calculo">
+                                        Intermitente
+                                    </label>
+                                </div>                           
+                            </div>
+                            <div class="container-texto-ordinario block">
+                                <p>
+                                    Jornada ordinaria es la ejecutada por trabajadores dentro de un período que no exceda de ocho (8) horas al día ni de cuarenta y cuatro (44) a la semana.
+                                </p>
+                                <p>
+                                    <span class="referencias">Referencias:</span> <span><a href="https://mt.gob.do/transparencia/images/docs/publicaciones/codigo-de-trabajo.pdf">Art. 147</a></span> del Código de Trabajo;
+                                </p>
+                            </div>
+                            <div class="container-texto-intermitente hidden">
+                                <p>Jornada intermitente es la ejecutada por trabajadores que requieren su sola presencia en el lugar de trabajo, los cuales pudieran laborar consecuentemente por un periodo de hasta diez (10) horas diarias. Estos trabajadores son: los porteros, los ascensoristas, los serenos, los guardianes, los conserjes, los barberos, los sastres, los empleados de bombas para el expendio de gasolina, los capataces, los mozos de cafés y restaurantes, las manicuristas, los camareros, los trabajadores ocupados en vehículos de transporte terrestre que presten servicios intermitentes o entre dos o más municipios y los trabajadores del campo.</p>
+                                <p><span class="referencias">Referencias:</span> resolución 04/93 del Ministerio de Trabajo, sobre trabajadores que ejecutan labores intermitentes, arts. 281, 284 y 285 del Código de Trabajo y art. 78 del Reglamento 258/93 para la aplicación del Código de Trabajo</p>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>  
+        </section>          
+        <section class="container-section section-table-and-result">
+            <section class="section-table-salarioss">
+                <table class="salarios">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Salarios</th>
+                            <th>Comisiones</th>
+                            <th>Totales</th>
+                            <th class="th-button-completar">Completar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodySalarios" class="tbody-salarios">
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><input type="text" placeholder="0.00" class="input-salary"></td>
+                            <td><input type="text" placeholder="0.00" class="input-comisiones"></td>
+                            <td><input type="text" placeholder="0.00" class="input-total" value="0.00"></td>
+                            <td class="button-completar"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="section-result-and-options">
+                <section class="container-table-results">
+                    <table class="table-show-results">
+                        <thead>
+                            <tr>
+                                <th>Sumatoria de los salarios</th>
+                                <th>Salario promedio mensual</th>
+                                <th>Salario promedio diario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-show-results">
+                                <td ><span id="sum-salarios"> 0.00 </span></td>
+                                <td ><span id="salario-promedio-mensual">0.00</span></td>
+                                <td ><span id="salario-promedio-diario">0.00</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="other-options">
+                    <ul class="container-other-options">
+                        <li>
+                            <div>
+                                <p>¿Ha sido usted pre-avisado?</p>
+                            </div>
+                            <div>
+                                <input class="option-input checkbox" type="checkbox" id="chkPreAviso">
+                            </div>
+                            <div>
+                                <p class="monto"><span id="preAviso">0.00</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p>¿Desea incluir cesantia?</p>
+                            </div>
+                            <div>
+                                <input class="option-input checkbox" type="checkbox" id="chkCesantia">
+                            </div>
+                            <div>
+                                <p class="monto"><span id="cesantia">0.00</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p>¿Ha tomado las vacaciones correspondientes al último año?</p>
+                            </div>
+                            <div>
+                                <input class="option-input checkbox" type="checkbox" id="chkVacaciones">
+                            </div>
+                            <div>
+                                <p class="monto"><span id="vacaciones">0.00</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p>¿Incluir salario de navida?</p>
+                            </div>
+                            <div>
+                                <input class="option-input checkbox" type="checkbox" id="chkSalarioNavidad">
+                            </div>
+                            <div>
+                                <p class="monto"><span id="navidad">0.00</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="results">
+                    <div>
+                        <p>Tiempo laborado: <span id="spanTiempoLaborado"></span></p>
+                    </div>                                      
+                    <div>
+                        <p>Total a recibir: <span class="monto"></span> <span id="spanTotal">0.00</span></p>
+                    </div>
+                </section>
+                <section class="botones">
+                    <div>
+                        <button class="button" id="btnCalcular">calcular</button>
+                    </div>
+                    <div>
+                        <button class="button" id="btnLimpiar">limpiar</button>
+                    </div>
+                </section>
+            </section>            
+        </section>   
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js" integrity="sha512-KKbQg5o92MwtJKR9sfm/HkREzfyzNMiKPIQ7i7SZOxwEdiNCm4Svayn2DBq7MKEdrqPJUOSIpy1v6PpFlCQ0YA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="./index.js"></script>          
+    <script src="./probando.js"></script>    
+</body>
+</html>

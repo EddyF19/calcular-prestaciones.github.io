@@ -1,0 +1,405 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Istok Web', sans-serif;
+}
+
+body{
+    /* background-color: #0b1721; */
+    /* background-color: #114f90; */
+    background-color: #c7c7c7;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%) ;    
+    min-height: 100vh;
+}
+
+body > * {
+    margin-top: 10px;  
+    background-color: #fff;  
+}
+
+/* CSS HEADER */
+
+header{
+    padding: 1rem 0px;    
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.9px 1.5px;
+    font-family: 'Istok Web', sans-serif;
+}
+
+h1.title-app{    
+    text-align: center;    
+    font-weight: bold;
+}
+
+header nav{        
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;          
+}
+
+nav div{
+    width: 50%;
+}
+
+.img-logo{        
+    max-height: 55px;
+    max-width: 160px;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+li a{
+    display: inline-block;
+}
+
+li a:visited{
+    color: black;
+}
+
+li a:hover{
+    color: #007bff;
+    transform: scale(1.2);
+    transition: .45s;
+}
+
+/* CSS MAIN */
+
+main{
+    width: 80%;
+    margin: 10px auto;
+    background: none;    
+}
+
+.container-section{
+    box-shadow: rgba(136, 21, 21, 0.35) 0px 5px 15px;
+    margin-top: 1rem;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+form#form-user-information{
+    display: flex;
+    flex-wrap: wrap;    
+    overflow: hidden;
+    padding: 5px 10px; 
+    font-family: Source Sans Pro,sans-serif,"Helvetica Neue",Helvetica,Arial;           
+}
+
+form#form-user-information > *{
+    width: 50%;
+}
+
+form#form-user-information fieldset, fieldset > *{
+    margin-top: 10px;
+}
+
+form#form-user-information legend{
+    font-size: 1.5rem;
+    color: #3931af;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+}
+
+form > .container-input{
+    width: 100%;    
+}
+
+form .container-input-date{
+    width: 50%;    
+}
+
+form#form-user-information input[type='text'], 
+form#form-user-information input[type='date']{
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    color: #007bff;
+    font-size: 1rem;
+}
+
+.container-inputs-radio{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container-inputs-radio div{
+    width: 35%;
+    margin-bottom: 1rem;
+}
+
+.container-inputs-radio *:hover{
+    cursor: pointer;
+}
+
+.container-texto-ordinario p, .container-texto-intermitente p{
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify;
+    padding-right: 15px;
+}
+
+.container-texto-ordinario a, .container-texto-intermitente a{
+    text-decoration: underline;
+}
+
+/* CSS section-table-and-result */
+
+.section-table-and-result
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-table-salarioss, .section-result-and-options{
+    width: 50%;
+    box-sizing: border-box;    
+    font-family: Source Sans Pro,sans-serif,"Helvetica Neue",Helvetica,Arial;
+}
+
+.section-table-salarioss{
+    color: #007bff;
+    overflow: hidden;      
+}
+
+table{
+    box-sizing: border-box;
+    width: 100%; 
+    flex-grow: 1;          
+    border-collapse: separate;   
+    border-spacing: 15px 10px;
+}
+
+.salarios input[type='text']{
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: #000000 1px solid;    
+    color: #007bff;
+    font-size: 1rem;
+}
+
+.salarios input[type='text']:focus{
+    border-bottom: #007bff 2px solid;  
+    transition: .2s;
+}
+
+table th{
+    color: #007bff;    
+}
+
+table thead th{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.table-show-results tr, .table-show-results th{
+    text-align: center;
+}
+
+tr.row-show-results > *::before, .monto::before{    
+    content: "RD$";
+}
+
+.hidden{
+    display: none;
+}
+
+.block{
+    display: block;
+}
+
+/* CSS SECTION OTHER OPTIONS */
+
+ul.container-other-options li{
+    display: flex;
+    gap: 30px;    
+    margin-top: 20px;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+ul.container-other-options li > *{
+    width: 30%;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+ul.container-other-options li > *:nth-child(2){
+    text-align: center;
+    vertical-align: baseline;    
+    position: relative;    
+}
+
+ul.container-other-options li > *:nth-child(2) > *{
+    margin: 0;
+    position: relative;
+    top: 0;
+    
+}
+
+/* CSS Section results */
+
+.results > *{
+    margin-top: 20px;    
+    background-color: #e2e2e2;
+    font-size: 1.3rem;
+    padding: 5px 0 5px 5px ;
+}
+
+.results div:last-child{
+    background-color: #26a69a;
+    color: #fff;
+}
+
+.section-result-and-options > *{
+    margin-bottom: 40px;
+}
+/* CSS Section botones */
+section.botones{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 30px;        
+}
+
+.button{
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+}
+
+.button:disabled {
+    cursor: default;
+}
+
+.button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+@media (max-width: 1650px){
+    .section-table-and-result{
+        flex-direction: column;        
+    }    
+    .section-table-and-result > *{
+        min-width: 100%;
+    }
+    table.salarios{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 750px){
+    form#form-user-information{        
+        flex-direction: column;
+    }
+    form#form-user-information > *{
+        width: 100%;
+    }
+}
+
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+.option-input:hover {
+    background: #9faab7;
+}
+.option-input:checked {
+    background: #40e0d0;
+}
+.option-input:checked::before {
+    font-family:'Font Awesome 5 Free';
+    width: 40px;
+    height: 40px;
+    display:flex;
+    content: '\f00c';
+    font-size: 25px;
+    font-weight:bold;
+    position: absolute;
+    align-items:center;
+    justify-content:center;    
+}
+.option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+.option-input.radio {
+    border-radius: 50%;
+}
+.option-input.radio::after {
+    border-radius: 50%;
+}
+  
+@keyframes click-wave {
+    0% {
+      height: 40px;
+      width: 40px;
+      opacity: 0.35;
+      position: relative;
+    }
+    100% {
+      height: 200px;
+      width: 200px;
+      margin-left: -80px;
+      margin-top: -80px;
+      opacity: 0;
+    }
+}
+
+.th-button-completar, .button-completar{
+    display: none;
+}
